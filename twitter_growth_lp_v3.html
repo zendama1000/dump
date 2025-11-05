@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="相互フォローで月収100万円を実現した男が暴露する「爆速万アカの真実」30日で1万フォロワーを実現する究極のシステム">
-    <title>爆速万アカ完全ガイド - 30日で1万フォロワーを実現する究極のシステム V3</title>
+    <title>爆速万アカ完全ガイド - 30日で1万フォロワーを実現する究極のシステム</title>
     <style>
         :root {
             --primary-color: #1DA1F2;
@@ -45,23 +45,20 @@
             overflow-x: hidden;
         }
 
-        /* ヘッダー */
         .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
         }
 
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 0 2rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
@@ -78,10 +75,10 @@
             background: var(--gradient-primary);
             color: white;
             border: none;
-            padding: 0.75rem 2rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-md);
@@ -94,16 +91,6 @@
             box-shadow: var(--shadow-lg);
         }
 
-        .cta-button.secondary {
-            background: var(--gradient-secondary);
-        }
-
-        .cta-button.large {
-            padding: 1.25rem 3rem;
-            font-size: 1.25rem;
-        }
-
-        /* ヒーローセクション */
         .hero {
             background: var(--gradient-primary);
             color: white;
@@ -152,7 +139,6 @@
             opacity: 0.9;
         }
 
-        /* コンテナ */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -163,7 +149,6 @@
             max-width: 800px;
         }
 
-        /* セクション */
         .section {
             margin-bottom: 4rem;
         }
@@ -194,7 +179,6 @@
             color: var(--primary-color);
         }
 
-        /* 実験結果ボックス */
         .results-box {
             background: white;
             border-radius: 20px;
@@ -256,7 +240,6 @@
             flex-shrink: 0;
         }
 
-        /* カード */
         .card {
             background: white;
             border-radius: 15px;
@@ -281,7 +264,6 @@
             color: white;
         }
 
-        /* グリッド */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -289,7 +271,6 @@
             margin: 2rem 0;
         }
 
-        /* 引用 */
         .quote {
             border-left: 5px solid var(--primary-color);
             padding: 1.5rem 2rem;
@@ -300,7 +281,6 @@
             font-size: 1.1rem;
         }
 
-        /* リスト */
         .list-styled {
             list-style: none;
             margin: 1.5rem 0;
@@ -320,8 +300,7 @@
             font-size: 0.8rem;
         }
 
-        /* コードブロック */
-        .code-block {
+        .code-block, .template-box {
             background: var(--bg-dark);
             color: var(--text-light);
             padding: 2rem;
@@ -332,37 +311,12 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* テーブル */
-        .table-wrapper {
-            overflow-x: auto;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: var(--shadow-md);
+        .template-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            white-space: pre-wrap;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-
-        th, td {
-            padding: 1rem 1.5rem;
-            text-align: left;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        th {
-            background: var(--gradient-primary);
-            color: white;
-            font-weight: 700;
-        }
-
-        tr:hover {
-            background: var(--bg-light);
-        }
-
-        /* 統計ボックス */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -401,188 +355,59 @@
             font-weight: 600;
         }
 
-        /* FAQ */
-        .faq-item {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            box-shadow: var(--shadow-sm);
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
         }
 
-        .faq-item:hover {
+        .comparison-item {
+            padding: 2rem;
+            border-radius: 15px;
             box-shadow: var(--shadow-md);
         }
 
-        .faq-question {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
+        .comparison-item.bad {
+            background: #FFF5F5;
+            border-left: 5px solid var(--accent-color);
         }
 
-        .faq-answer {
-            color: var(--text-secondary);
-            line-height: 1.7;
+        .comparison-item.good {
+            background: #F0FFF4;
+            border-left: 5px solid var(--success-color);
         }
 
-        /* バッジ */
-        .badge {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin: 0.25rem;
-        }
-
-        .badge-primary {
-            background: var(--gradient-primary);
-            color: white;
-        }
-
-        .badge-success {
-            background: var(--success-color);
-            color: white;
-        }
-
-        .badge-warning {
-            background: var(--warning-color);
-            color: white;
-        }
-
-        /* CTAセクション */
-        .cta-section {
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 5rem 2rem;
-            text-align: center;
-            border-radius: 30px;
-            margin: 4rem 0;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .cta-section h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section p {
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        /* フッター */
-        .footer {
-            background: var(--bg-dark);
-            color: var(--text-light);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer p {
-            opacity: 0.7;
-        }
-
-        /* レスポンシブ */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .hero {
-                padding: 4rem 1.5rem;
-            }
-
-            .container {
-                padding: 2rem 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.75rem;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .results-box,
-            .card {
-                padding: 1.5rem;
-            }
-        }
-
-        /* アニメーション */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        /* スクロールプログレスバー */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-            z-index: 9999;
-            transition: width 0.1s ease;
-        }
-
-        /* 強調表示 */
-        .highlight {
-            background: linear-gradient(180deg, transparent 60%, #FFE066 60%);
-            font-weight: 700;
-            padding: 0 0.25rem;
-        }
-
-        strong, b {
+        .comparison-title {
             font-weight: 800;
-            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
         }
 
-        /* テンプレートボックス */
-        .template-box {
-            background: var(--bg-dark);
-            color: var(--text-light);
-            padding: 2.5rem;
-            border-radius: 15px;
+        .warning-box {
+            background: #FFF9E6;
+            border-left: 5px solid var(--warning-color);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
             margin: 2rem 0;
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
         }
 
-        .template-box::before {
-            content: '📋';
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 3rem;
-            opacity: 0.2;
+        .warning-box strong {
+            color: var(--warning-color);
         }
 
-        .template-content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            white-space: pre-wrap;
+        .success-box {
+            background: #F0FFF4;
+            border-left: 5px solid var(--success-color);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin: 2rem 0;
         }
 
-        /* 段階的なフェーズ表示 */
+        .success-box strong {
+            color: var(--success-color);
+        }
+
         .phase-indicator {
             display: inline-block;
             background: var(--gradient-primary);
@@ -595,7 +420,6 @@
             box-shadow: var(--shadow-md);
         }
 
-        /* タイムライン */
         .timeline {
             position: relative;
             padding-left: 3rem;
@@ -637,104 +461,144 @@
             box-shadow: var(--shadow-md);
         }
 
-        /* ボタングループ */
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 2rem 0;
+        .cta-section {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-radius: 30px;
+            margin: 4rem 0;
+            box-shadow: var(--shadow-xl);
         }
 
-        /* 比較表 */
-        .comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
+        .cta-section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
         }
 
-        .comparison-item {
-            padding: 2rem;
-            border-radius: 15px;
+        .cta-section p {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer p {
+            opacity: 0.7;
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 60%, #FFE066 60%);
+            font-weight: 700;
+            padding: 0 0.25rem;
+        }
+
+        strong, b {
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 10px;
             box-shadow: var(--shadow-md);
         }
 
-        .comparison-item.bad {
-            background: #FFF5F5;
-            border-left: 5px solid var(--accent-color);
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
         }
 
-        .comparison-item.good {
-            background: #F0FFF4;
-            border-left: 5px solid var(--success-color);
+        th, td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .comparison-title {
-            font-weight: 800;
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
+        th {
+            background: var(--gradient-primary);
+            color: white;
+            font-weight: 700;
+        }
+
+        tr:hover {
+            background: var(--bg-light);
         }
 
         @media (max-width: 768px) {
-            .comparison {
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .grid, .comparison {
                 grid-template-columns: 1fr;
+            }
+
+            .results-box, .card {
+                padding: 1.5rem;
             }
         }
 
-        /* 警告ボックス */
-        .warning-box {
-            background: #FFF9E6;
-            border-left: 5px solid var(--warning-color);
-            padding: 1.5rem;
-            border-radius: 0 10px 10px 0;
-            margin: 2rem 0;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .warning-box strong {
-            color: var(--warning-color);
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
         }
 
-        /* 成功ボックス */
-        .success-box {
-            background: #F0FFF4;
-            border-left: 5px solid var(--success-color);
-            padding: 1.5rem;
-            border-radius: 0 10px 10px 0;
-            margin: 2rem 0;
-        }
-
-        .success-box strong {
-            color: var(--success-color);
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            z-index: 9999;
+            transition: width 0.1s ease;
         }
     </style>
 </head>
 <body>
-    <!-- プログレスバー -->
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- ヘッダー -->
     <header class="header">
         <div class="header-content">
-            <div class="logo">🚀 爆速万アカ</div>
-            <a href="#cta-final" class="cta-button">30日チャレンジに参加</a>
+            <div class="logo">🚀 爆速万アカ完全ガイド</div>
         </div>
     </header>
 
-    <!-- ヒーローセクション -->
     <section class="hero">
         <div class="hero-content fade-in-up">
             <h1>相互フォローで月収100万円を実現した男が暴露する<br>「爆速万アカの真実」</h1>
             <p class="hero-subtitle">～なぜ、たった1つのテンプレートが30日で1万フォロワーを生み出すのか～</p>
             <p class="hero-tagline">「短期間で1万フォロワー」そんな馬鹿げた話を実現する<span class="highlight">"秘密"</span>とは…</p>
-            <div class="button-group">
-                <a href="#results" class="cta-button large">実験結果を見る ↓</a>
-                <a href="#phase1" class="cta-button large secondary">今すぐ始める方法 →</a>
-            </div>
+            <a href="#cta-final" class="cta-button" style="font-size: 1.25rem; padding: 1.25rem 3rem;">今すぐ30日チャレンジに参加する</a>
         </div>
     </section>
 
-    <!-- 導入セクション -->
     <div class="container narrow">
         <div class="section fade-in-up">
             <div class="card">
@@ -759,8 +623,7 @@
             </div>
         </div>
 
-        <!-- 実験結果 -->
-        <div class="section" id="results">
+        <div class="section">
             <h2 class="section-title">実際の成果をご覧ください</h2>
 
             <div class="results-box">
@@ -795,35 +658,6 @@
                 </div>
             </div>
 
-            <div class="card-highlight card">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">これを見て、あなたはさまざまな疑問が浮かんだはずです。</h3>
-                <ul class="list-styled" style="color: white;">
-                    <li>本当に短期間で万アカになれるの?</li>
-                    <li>相互フォローってエンゲージメント低いんじゃないの?</li>
-                    <li>しりとりって何?</li>
-                    <li>結局、どうやったら再現できるの?</li>
-                    <li>早くやってみたいから答えを教えて!</li>
-                </ul>
-            </div>
-
-            <p style="text-align: center; font-size: 1.5rem; font-weight: 700; margin: 3rem 0;">
-                その中でも特に、<br>
-                <span style="font-size: 1.75rem; color: var(--accent-color);">
-                    「結局、どうやったらアカウントを伸ばせるの?」
-                </span><br>
-                これが一番気になるのではないでしょうか。
-            </p>
-        </div>
-
-        <!-- 実証データ -->
-        <div class="section">
-            <h2 class="section-title">一体この方法でどのような影響力を構築できるのか</h2>
-
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                私はこのリプライシステムのノウハウを開発し、即実践しました。<br>
-                （実際には複数人のチームで組織的に実行しました）
-            </p>
-
             <div class="results-box">
                 <h3 class="results-title">実証データ</h3>
                 <ul class="results-list">
@@ -834,20 +668,8 @@
                     <li>推薦アルゴリズムへの採用率: 顕著に向上</li>
                 </ul>
             </div>
-
-            <div class="success-box">
-                <p style="font-size: 1.2rem; font-weight: 600;">
-                    上記のように想定を超える結果が出ました。
-                </p>
-                <p style="margin-top: 1rem;">
-                    これは私が全て自分でやったわけではありません。<br>
-                    <strong>「たった1つのシステムを導入しただけで生み出した成果」</strong><br>
-                    ということです。
-                </p>
-            </div>
         </div>
 
-        <!-- 自己紹介 -->
         <div class="section">
             <h2 class="section-title">複数のアカウントを運営するSNS研究者です</h2>
 
@@ -859,22 +681,14 @@
                     私は現在、複数のSNSアカウントを運営し、アカウント育成システムの研究と実践を続けています。<br>
                     家族との時間を大切にしながら、運営スタイルは<strong>「自動化、組織化、効率化」</strong>です。
                 </p>
-                <p style="margin-top: 1rem;">
-                    なるべく自分の時間を使わず、システムやテンプレートを活用し、時間効率を高め、コスパよく影響力を拡大することを徹底しています。
-                </p>
             </div>
 
             <div class="quote">
                 「たった1つのシステムでアカウントを変える」を極めた結果、今があります。<br>
                 （今回もそういう話をします）
             </div>
-
-            <p style="font-size: 1.1rem;">
-                私は世の中の情報発信者が<strong>「こんな簡単に万アカになるの?」</strong>と驚くようなシンプルな手法でアカウントを成長させ続けています。
-            </p>
         </div>
 
-        <!-- 過去の苦悩 -->
         <div class="section">
             <h2 class="section-title">過去の話です。</h2>
 
@@ -899,13 +713,8 @@
                     ということ。
                 </p>
             </div>
-
-            <p style="font-size: 1.1rem; margin-top: 2rem;">
-                そこから研究を重ね、短期間で圧倒的なフォロワー増、インプレッションの飛躍的向上を達成する方法を確立しました。
-            </p>
         </div>
 
-        <!-- 条件 -->
         <div class="section">
             <h2 class="section-title">残念なお知らせがあります…</h2>
 
@@ -913,18 +722,10 @@
                 <p style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">
                     今回お伝えするリプライシステム活用法を実践するには、たった1つだけ条件があるのです。
                 </p>
-                <p style="margin-bottom: 1rem;">
+                <p>
                     <strong>「誰でも必ず成功できる」というわけではありません。</strong>
                 </p>
-                <p style="font-weight: 600;">
-                    この条件をクリアせず結果が出る人は1人もいません。
-                </p>
             </div>
-
-            <p style="text-align: center; font-size: 1.3rem; margin: 2rem 0;">
-                いいですか?<br>
-                では、その条件とは…
-            </p>
 
             <div class="card-highlight card" style="text-align: center;">
                 <p style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem;">
@@ -935,11 +736,6 @@
                 </p>
             </div>
 
-            <p style="margin-top: 2rem; line-height: 1.8;">
-                多くの人が「これじゃダメだろう」「もっと工夫しないと」と思いながら、結局オリジナルの要素を加えて失敗しています。<br>
-                特に<strong>「自分なりのアレンジ」という罠</strong>に苦しめられている人が多いように感じています。
-            </p>
-
             <div class="quote">
                 自分のこだわり=正義です。<br><br>
                 この正義を捨てて、言われたとおりに<br>
@@ -949,30 +745,14 @@
         </div>
     </div>
 
-    <!-- メインコンテンツ -->
     <div class="container">
-        <div class="section" id="phase1">
+        <div class="section">
             <div class="phase-indicator">フェーズ①: 究極のテンプレート戦略</div>
-            <h2 class="section-title">なぜこの文章だけで爆発的にフォロワーが増えるのか（Cランク育成）</h2>
+            <h2 class="section-title">なぜこの文章だけで爆発的にフォロワーが増えるのか</h2>
 
             <p style="font-size: 1.1rem; margin-bottom: 2rem;">
                 Cランクはフォロワーが多いアカウントでしたね。最低でも<strong>10,000フォロワー</strong>は欲しいところです。
             </p>
-
-            <p style="font-size: 1.2rem; font-weight: 700; margin: 2rem 0;">
-                では、どうやって効率的にフォロワーを増やすのか?
-            </p>
-
-            <p style="font-size: 1.3rem; text-align: center; margin: 2rem 0; font-weight: 700;">
-                その答えが、これからご紹介する<span class="highlight">「究極のテンプレート戦略」</span>です。
-            </p>
-
-            <div class="card">
-                <p style="font-size: 1.1rem; line-height: 1.8;">
-                    このテンプレートは普通のテンプレートではありません。<br>
-                    <strong>人間の7つの心理トリガーを全て活用した、科学的に設計されたもの</strong>です。
-                </p>
-            </div>
 
             <div class="success-box">
                 <p style="font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 1rem;">
@@ -983,11 +763,6 @@
                 </p>
             </div>
 
-            <p style="margin-top: 2rem; line-height: 1.8;">
-                この方法は数年前に一部の成功者だけが使っていた手法で、非常にシンプルですが、<strong>驚異的な効果</strong>があります。
-            </p>
-
-            <!-- テンプレート -->
             <h3 class="section-subtitle">秘密のテンプレート文（実物）</h3>
 
             <div class="template-box">
@@ -1006,18 +781,6 @@
 #相互フォロー #フォロパ100</div>
             </div>
 
-            <p style="text-align: center; font-size: 1.5rem; font-weight: 700; margin: 2rem 0;">
-                「え?これだけ?」
-            </p>
-
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">
-                そう思いましたか?
-            </p>
-
-            <p style="text-align: center; font-size: 1.5rem; font-weight: 800;">
-                はい、これだけです。
-            </p>
-
             <div class="card-highlight card" style="margin-top: 3rem;">
                 <p style="font-size: 1.3rem; font-weight: 700; text-align: center;">
                     しかし、このテンプレートには、あなたが気づいていない<br>
@@ -1026,7 +789,6 @@
                 </p>
             </div>
 
-            <!-- 7つの心理トリガー -->
             <h3 class="section-subtitle" style="margin-top: 3rem;">テンプレートに隠された7つの心理トリガーの全貌</h3>
 
             <div class="grid">
@@ -1037,9 +799,6 @@
                     <p>
                         人間の脳は「期限」があると行動を起こしやすくなります。48時間という絶妙な期限設定により、「今すぐやらなきゃ」という心理が働きます。
                     </p>
-                    <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">
-                        これは心理学では「デッドライン効果」と呼ばれ、期限が近いほど行動確率が上がることが科学的に証明されています。
-                    </p>
                 </div>
 
                 <div class="card">
@@ -1048,9 +807,6 @@
                     </h4>
                     <p>
                         「企画」という言葉が、通常とは違う特別なオファーであることを示します。人は限定的なものに価値を感じます。
-                    </p>
-                    <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">
-                        これは「希少性の原理」と呼ばれ、入手困難なものほど価値を感じる人間の心理を利用しています。
                     </p>
                 </div>
 
@@ -1061,9 +817,6 @@
                     <p>
                         「あなたが私に何かしてくれたら、私も必ずお返しします」という約束。これは人間の最も基本的な心理原則です。
                     </p>
-                    <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">
-                        ロバート・チャルディーニの「影響力の武器」でも最初に紹介される、最も強力な心理トリガーです。
-                    </p>
                 </div>
 
                 <div class="card">
@@ -1072,9 +825,6 @@
                     </h4>
                     <p>
                         「お互い万アカ目指しましょう」という表現で、他の人も参加していることを示唆。人は他人の行動に影響されます。
-                    </p>
-                    <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">
-                        これは「バンドワゴン効果」とも呼ばれ、多くの人が行動していることで安心感を得る心理です。
                     </p>
                 </div>
 
@@ -1085,9 +835,6 @@
                     <p>
                         小さな行動（RT、いいね、フォロー）を積み重ねることで、心理的に「投資した」という感覚が生まれ、関係を継続したくなります。
                     </p>
-                    <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">
-                        これは「サンクコストバイアス」と「一貫性の原理」の複合効果で、一度投資したものを無駄にしたくない心理が働きます。
-                    </p>
                 </div>
 
                 <div class="card">
@@ -1096,9 +843,6 @@
                     </h4>
                     <p>
                         「万アカ」という目標を掲げることで、「この人は本気だ」という印象を与えます。
-                    </p>
-                    <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">
-                        明確な目標を持つ人に対して、人は信頼感と尊敬を抱きやすいという心理を活用しています。
                     </p>
                 </div>
 
@@ -1109,93 +853,13 @@
                     <p>
                         🔥や💪などの絵文字が、堅苦しさを取り除き、親しみやすさを演出します。
                     </p>
-                    <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">
-                        視覚的な要素は感情に直接訴えかけ、好意を形成しやすくなることが研究で明らかになっています。
-                    </p>
                 </div>
-            </div>
-
-            <div class="card-highlight card" style="margin-top: 3rem; text-align: center;">
-                <p style="font-size: 1.5rem; font-weight: 800;">
-                    これら7つ全てが、たった数行の文章に凝縮されているのです!
-                </p>
             </div>
         </div>
 
-        <!-- なぜ魔法のように効くのか -->
         <div class="section">
-            <h2 class="section-title">なぜ、このテンプレートは「魔法」のように効くのか</h2>
-
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                実は、このテンプレートを見た人の脳内では、以下のような思考が<strong>0.3秒以内</strong>に処理されます:
-            </p>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <strong>1. 「お、企画やってる」</strong>（注目）
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <strong>2. 「全員フォローか、いいな」</strong>（利益認識）
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <strong>3. 「条件簡単じゃん」</strong>（ハードルの低さ）
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <strong>4. 「48時間か、今やっとこ」</strong>（行動決定）
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-highlight card">
-                <p style="font-size: 1.3rem; font-weight: 700; text-align: center;">
-                    この0.3秒の間に、7つの心理トリガーが同時に働き、<br>
-                    「行動しない理由」を見つける前に行動に移してしまうのです。
-                </p>
-            </div>
-
-            <p style="font-size: 1.2rem; font-weight: 700; margin-top: 2rem; text-align: center;">
-                これが、このテンプレートが驚異的な成果を出す本当の理由です。
-            </p>
-        </div>
-    </div>
-
-    <!-- CTAセクション（中間） -->
-    <div class="container">
-        <div class="cta-section">
-            <h2>今すぐテンプレートを使ってみませんか？</h2>
-            <p>このテンプレートを固定ツイートに設定するだけで、<br>あなたのアカウントが動き始めます。</p>
-            <div class="button-group">
-                <a href="#phase2" class="cta-button large" style="background: white; color: var(--primary-color);">
-                    次のフェーズを見る →
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- フェーズ②以降は簡略版で続く -->
-    <div class="container narrow">
-        <div class="section" id="phase2">
             <div class="phase-indicator">フェーズ②: アルゴリズムの核心</div>
             <h2 class="section-title">アルゴリズムの核心を突く</h2>
-
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                フェーズ①のテンプレート戦略、いかがでしたか？
-            </p>
-
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-                「こんなに簡単にフォロワーが増えるなんて...」
-            </p>
-
-            <p style="font-size: 1.1rem;">
-                そう感じた方も多いはずです。
-            </p>
 
             <div class="warning-box">
                 <p style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1rem;">
@@ -1236,25 +900,19 @@
             </div>
         </div>
 
-        <div class="section" id="phase3">
+        <div class="section">
             <div class="phase-indicator">フェーズ③: しりとり相互の全貌</div>
             <h2 class="section-title">革命的リプライシステム「しりとり相互」</h2>
-
-            <p style="font-size: 1.3rem; font-weight: 700; text-align: center; margin: 2rem 0;">
-                ここで、衝撃的な比較データをご覧ください。
-            </p>
 
             <div class="comparison">
                 <div class="comparison-item bad">
                     <div class="comparison-title">【従来の一般的なリプライ】</div>
-                    <p style="margin: 1rem 0;"><strong>例:</strong> 「すごく共感しました!」「勉強になります!」「いいねしました!」</p>
+                    <p style="margin: 1rem 0;"><strong>例:</strong> 「すごく共感しました!」「勉強になります!」</p>
                     <p style="font-weight: 700; margin-bottom: 0.5rem;">問題点:</p>
                     <ul class="list-styled" style="margin-left: 1rem;">
                         <li>内容が薄く、Bot感が出る</li>
                         <li>会話が続かない（1往復で終了）</li>
-                        <li>アルゴリズムが「形式的な交流」と判定</li>
-                        <li>相手もあなたを覚えられない</li>
-                        <li>リプライに時間がかかる（考える必要がある）</li>
+                        <li>リプライに時間がかかる</li>
                     </ul>
                     <p style="margin-top: 1rem; font-weight: 800; color: var(--accent-color);">
                         結果: インプレッション増加率 +12%
@@ -1265,16 +923,12 @@
                     <div class="comparison-title">【しりとりリプライ】</div>
                     <p style="margin: 1rem 0;"><strong>例:</strong><br>
                         A: 「今日はカレーを食べました 🍛」<br>
-                        B: 「レモンサワー最高ですよね!🍋」<br>
-                        A: 「ワンピース見てます!📺」<br>
-                        B: 「スマホゲームにハマってます 📱」
+                        B: 「レモンサワー最高ですよね!🍋」
                     </p>
                     <p style="font-weight: 700; margin-bottom: 0.5rem;">特徴:</p>
                     <ul class="list-styled" style="margin-left: 1rem;">
                         <li>会話が自然に続く（平均15-30往復）</li>
                         <li>脳死で返信可能（考える必要なし）</li>
-                        <li>Bot判定されにくい（自然な日本語）</li>
-                        <li>相手の記憶に残りやすい</li>
                         <li>作業時間が1/5に短縮</li>
                     </ul>
                     <p style="margin-top: 1rem; font-weight: 800; color: var(--success-color); font-size: 1.2rem;">
@@ -1291,96 +945,58 @@
                 <p style="font-size: 1.5rem; text-align: center; font-weight: 900;">
                     これは 7.25倍 の差です。
                 </p>
-                <p style="font-size: 1.1rem; text-align: center; margin-top: 1rem;">
-                    つまり、同じ時間を使っても、しりとりリプライは<br>
-                    従来の方法の <strong>7倍以上の効果</strong> があるということです。
-                </p>
             </div>
-        </div>
 
-        <!-- 実践事例 -->
-        <div class="section">
-            <h2 class="section-title">実践者の声（リアルな成功事例）</h2>
+            <h3 class="section-subtitle">実践者の声（リアルな成功事例）</h3>
 
             <div class="grid">
                 <div class="card">
                     <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">
-                        事例1: 会社員Aさん（30代男性）
+                        会社員Aさん（30代男性）
                     </h4>
                     <div style="background: #FFF5F5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <p style="font-weight: 700; margin-bottom: 0.5rem;">開始前:</p>
-                        <ul class="list-styled" style="margin-left: 1rem;">
-                            <li>フォロワー: 320人</li>
-                            <li>毎日投稿してもいいね数個</li>
-                            <li>誰にも見られていない孤独感</li>
-                        </ul>
+                        <p style="font-weight: 700;">開始前: フォロワー320人</p>
                     </div>
                     <div style="background: #F0FFF4; padding: 1rem; border-radius: 8px;">
-                        <p style="font-weight: 700; margin-bottom: 0.5rem;">30日後:</p>
-                        <ul class="list-styled" style="margin-left: 1rem;">
-                            <li>フォロワー: 4,870人</li>
-                            <li>バズツイート3回発生</li>
-                            <li>いいね平均50以上</li>
-                        </ul>
+                        <p style="font-weight: 700;">30日後: フォロワー4,870人</p>
                     </div>
                     <div class="quote" style="margin-top: 1rem; font-size: 0.95rem;">
-                        「最初は正直『しりとりって...』と思いました。でも、実際やってみたら楽しくて、気づいたらフォロワーが爆増していました。何より、考えなくていいのが最高です。通勤電車の中で脳死でポチポチするだけ。これなら誰でも続けられます。」
+                        「通勤電車の中で脳死でポチポチするだけ。これなら誰でも続けられます。」
                     </div>
                 </div>
 
                 <div class="card">
                     <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">
-                        事例2: 主婦Bさん（40代女性）
+                        主婦Bさん（40代女性）
                     </h4>
                     <div style="background: #FFF5F5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <p style="font-weight: 700; margin-bottom: 0.5rem;">開始前:</p>
-                        <ul class="list-styled" style="margin-left: 1rem;">
-                            <li>フォロワー: 180人</li>
-                            <li>育児の合間に投稿するも反応なし</li>
-                            <li>アカウント育成を諦めかけていた</li>
-                        </ul>
+                        <p style="font-weight: 700;">開始前: フォロワー180人</p>
                     </div>
                     <div style="background: #F0FFF4; padding: 1rem; border-radius: 8px;">
-                        <p style="font-weight: 700; margin-bottom: 0.5rem;">30日後:</p>
-                        <ul class="list-styled" style="margin-left: 1rem;">
-                            <li>フォロワー: 3,920人</li>
-                            <li>育児アカウントとして認知され始める</li>
-                            <li>企業案件のDMが来るように</li>
-                        </ul>
+                        <p style="font-weight: 700;">30日後: フォロワー3,920人</p>
                     </div>
                     <div class="quote" style="margin-top: 1rem; font-size: 0.95rem;">
-                        「子供が寝た後の15分だけでできるのが助かりました。しりとりだから考える必要もなく、ストレスフリー。フォロワーが増えて、同じ育児中のママさんたちとつながれたのが一番嬉しいです。」
+                        「子供が寝た後の15分だけでできるのが助かりました。」
                     </div>
                 </div>
 
                 <div class="card">
                     <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">
-                        事例3: 大学生Cさん（20代男性）
+                        大学生Cさん（20代男性）
                     </h4>
                     <div style="background: #FFF5F5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <p style="font-weight: 700; margin-bottom: 0.5rem;">開始前:</p>
-                        <ul class="list-styled" style="margin-left: 1rem;">
-                            <li>フォロワー: 95人</li>
-                            <li>バイトと勉強で忙しくSNS放置</li>
-                            <li>影響力を持ちたいけど時間がない</li>
-                        </ul>
+                        <p style="font-weight: 700;">開始前: フォロワー95人</p>
                     </div>
                     <div style="background: #F0FFF4; padding: 1rem; border-radius: 8px;">
-                        <p style="font-weight: 700; margin-bottom: 0.5rem;">30日後:</p>
-                        <ul class="list-styled" style="margin-left: 1rem;">
-                            <li>フォロワー: 6,240人</li>
-                            <li>バイト先で「Twitterやってる人」として認知</li>
-                            <li>就活で話題作りに成功</li>
-                        </ul>
+                        <p style="font-weight: 700;">30日後: フォロワー6,240人</p>
                     </div>
                     <div class="quote" style="margin-top: 1rem; font-size: 0.95rem;">
-                        「大学の授業中にスマホでしりとりしてただけで、気づいたらフォロワー6,000人超えてました（笑）。就活の面接で『SNS運用の経験』として話したら、めちゃくちゃ食いつかれて内定もらえました。人生変わりました。」
+                        「就活の面接で話したら、めちゃくちゃ食いつかれて内定もらえました。」
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 100×100の法則 -->
         <div class="section">
             <h2 class="section-title">100×100=10,000の法則</h2>
 
@@ -1396,83 +1012,442 @@
                     です。
                 </p>
             </div>
+        </div>
 
-            <div class="card" style="margin-top: 2rem;">
-                <h4 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--primary-color);">
-                    計算の根拠
-                </h4>
-                <p style="font-weight: 700; margin-bottom: 1rem;">前提:</p>
-                <ul class="list-styled">
-                    <li>あなたと固定でリプライ交流する相手: 100人</li>
-                    <li>1人あたり1日平均1往復（実質2リプライ）</li>
-                    <li>30日間継続</li>
-                </ul>
+        <div class="section">
+            <div class="phase-indicator">フェーズ④: 自動化と効率化</div>
+            <h2 class="section-title">複数アカウント運用の真髄</h2>
 
-                <p style="font-weight: 700; margin: 1.5rem 0 1rem;">効果:</p>
-                <ol style="list-style-position: inside; margin-left: 1rem;">
-                    <li style="margin-bottom: 0.75rem;"><strong>直接的なフォロワー増:</strong> 100人が全員フォローしてくれる → +100人</li>
-                    <li style="margin-bottom: 0.75rem;"><strong>その100人のフォロワーへの露出:</strong> リプライが100人のTLに表示 → 各人のフォロワー100人に露出 → 100×100=10,000人に認知される</li>
-                    <li><strong>アルゴリズムによる拡散:</strong> リプライ数が多いことで、あなたのツイートがおすすめに載りやすくなる → さらに数千人に露出</li>
-                </ol>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                ここまでで、以下が明確になりました:
+            </p>
 
-                <p style="font-size: 1.3rem; font-weight: 800; text-align: center; margin-top: 2rem; color: var(--success-color);">
-                    結果: 30日で 10,000フォロワー 到達
+            <ul class="list-styled">
+                <li>テンプレートでフォロワーを増やす（フェーズ①）</li>
+                <li>リプライによる交流がアカウントランクを上げる（フェーズ②）</li>
+                <li>しりとりリプライが最も効率的（フェーズ③）</li>
+            </ul>
+
+            <div class="warning-box" style="margin-top: 2rem;">
+                <p style="font-size: 1.3rem; font-weight: 800;">
+                    しかし、ここで新たな課題が浮上します。
+                </p>
+                <p style="font-size: 1.2rem; margin-top: 1rem;">
+                    「1つのアカウントだけでは、バズを意図的に生み出すのは難しい」
                 </p>
             </div>
 
-            <p style="font-size: 1.2rem; font-weight: 700; text-align: center; margin-top: 2rem;">
-                これは理論値ではなく、<span class="highlight">実際に達成可能な数字</span>です。
+            <p style="font-size: 1.1rem; margin-top: 2rem;">
+                バズツイートの条件を思い出してください:<br>
+                <strong>「Cランク以上のアカウントから複数リプライがついているツイート」</strong>
             </p>
-        </div>
-    </div>
 
-    <!-- 最終CTAセクション -->
-    <div class="container" id="cta-final">
-        <div class="cta-section">
-            <h2>30日チャレンジに参加しませんか？</h2>
-            <p>このシステムを本気で実践したい方のために、<br>「30日チャレンジ」を用意しました。</p>
+            <p style="font-size: 1.2rem; font-weight: 700; margin-top: 1rem;">
+                つまり、バズを意図的に生み出すためには、<span class="highlight">複数の高ランクアカウントを所有する必要がある</span>のです。
+            </p>
 
-            <div class="card" style="margin: 2rem auto; max-width: 600px; text-align: left;">
-                <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">30日チャレンジで得られるもの</h4>
-                <ul class="results-list">
-                    <li>しりとり相互コミュニティへの参加</li>
-                    <li>固定しりとり相手の確保</li>
-                    <li>アカウント複数管理ツールの紹介</li>
-                    <li>自動ツイートツールの紹介</li>
-                    <li>24時間以内の専属サポート</li>
+            <h3 class="section-subtitle">複数アカウント運用の3つのメリット</h3>
+
+            <div class="grid">
+                <div class="card">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">メリット1: バズの完全コントロール</h4>
+                    <p>5-10個の高ランクアカウントを持っていれば、自分のメインツイートに全アカウントからリプライ。アルゴリズムが「注目されている」と判定し、意図的にバズを生み出せる。</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">メリット2: リスク分散</h4>
+                    <p>1つが凍結しても他がある。各アカウントで異なる戦略を試せる。リスクが完全に分散される。</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">メリット3: 収益の最大化</h4>
+                    <p>それぞれ別ジャンルに特化。アフィリエイト、PR案件を分散。収益源が複数確保される。</p>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">アカウント運用を10倍効率化する2つの必須ツール</h3>
+
+            <div class="card">
+                <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">ツール1: 複数アカウント管理ツール</h4>
+                <p style="margin-bottom: 1rem;"><strong>推奨:</strong> SocialDog、Hootsuite、TweetDeck</p>
+                <p style="font-weight: 700; margin-bottom: 0.5rem;">できること:</p>
+                <ul class="list-styled">
+                    <li>複数アカウントを1画面で管理</li>
+                    <li>予約投稿機能</li>
+                    <li>フォロー・フォロバの効率化</li>
+                    <li>アナリティクスの可視化</li>
                 </ul>
+                <p style="margin-top: 1rem; font-weight: 700; color: var(--success-color);">
+                    効果: 管理時間が1/3に短縮
+                </p>
             </div>
 
-            <div class="stats-grid" style="margin: 3rem 0;">
-                <div class="stat-box" style="background: rgba(255,255,255,0.2); color: white;">
-                    <span class="stat-number" style="-webkit-text-fill-color: white;">30日</span>
-                    <span class="stat-label" style="color: white;">で人生が変わる</span>
-                </div>
-                <div class="stat-box" style="background: rgba(255,255,255,0.2); color: white;">
-                    <span class="stat-number" style="-webkit-text-fill-color: white;">10,000</span>
-                    <span class="stat-label" style="color: white;">フォロワー目標</span>
-                </div>
-                <div class="stat-box" style="background: rgba(255,255,255,0.2); color: white;">
-                    <span class="stat-number" style="-webkit-text-fill-color: white;">94%</span>
-                    <span class="stat-label" style="color: white;">継続率</span>
-                </div>
+            <div class="card">
+                <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">ツール2: 自動ツイートツール（Bot）</h4>
+                <p style="margin-bottom: 1rem;"><strong>推奨:</strong> Zapier、IFTTT、Python自作Bot</p>
+                <p style="font-weight: 700; margin-bottom: 0.5rem;">できること:</p>
+                <ul class="list-styled">
+                    <li>テンプレートから自動ツイート生成</li>
+                    <li>ランダムな組み合わせで自然なバリエーション</li>
+                    <li>時間指定での自動投稿</li>
+                </ul>
+                <p style="margin-top: 1rem; font-weight: 700; color: var(--success-color);">
+                    効果: 投稿にかかる時間がゼロに
+                </p>
             </div>
 
-            <div class="button-group">
-                <a href="#" class="cta-button large" style="background: white; color: var(--primary-color);" onclick="alert('お問い合わせフォームや連絡先をここに設定してください'); return false;">
-                    今すぐ参加する
-                </a>
+            <div class="success-box">
+                <p style="font-size: 1.2rem; font-weight: 700; text-align: center;">
+                    あなたの実作業時間: 1日15分<br>
+                    これで5-10アカウントが自動的に成長し続けます。
+                </p>
             </div>
+        </div>
 
-            <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.9;">
-                参加条件: <strong>「本気で人生を変えたい」と思っていること</strong><br>
-                それだけです。
+        <div class="section">
+            <div class="phase-indicator">フェーズ⑤: バズの完全設計図</div>
+            <h2 class="section-title">意図的にバズを生み出す方法</h2>
+
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                ここまでで、以下が揃いました:
             </p>
+
+            <ul class="results-list" style="background: white; padding: 2rem; border-radius: 15px;">
+                <li>高ランクのアカウント（複数）</li>
+                <li>自動化されたシステム</li>
+                <li>リプライによる高エンゲージメント</li>
+            </ul>
+
+            <p style="font-size: 1.3rem; font-weight: 800; text-align: center; margin: 2rem 0;">
+                次は、これらを使って「意図的にバズを生み出す」フェーズです。
+            </p>
+
+            <h3 class="section-subtitle">バズツイートの設計図</h3>
+
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                バズツイートには、明確な<strong>「型」</strong>があります。
+            </p>
+
+            <div class="grid">
+                <div class="card">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">型1: 実績・ビフォーアフター型</h4>
+                    <div class="code-block" style="font-size: 0.95rem;">【3ヶ月の変化】
+
+3ヶ月前: フォロワー180人
+今: フォロワー12,000人
+
+やったこと:
+✅ 毎日投稿
+✅ リプライ交流
+✅ しりとり相互
+
+次はあなたの番です 🔥</div>
+                    <p style="margin-top: 1rem;">この型は、<strong>社会的証明</strong>と<strong>FOMO（取り残される恐怖）</strong>を刺激します。</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">型2: 共感・あるある型</h4>
+                    <div class="code-block" style="font-size: 0.95rem;">「毎日投稿してるのに誰も見てくれない」
+
+これ、3ヶ月前の私です。
+
+でも、リプライ交流を始めたら人生変わりました。
+
+フォロワー180→12,000人
+バズ月3回
+収益月10万円
+
+大事なのは投稿じゃなくて「交流」でした。</div>
+                    <p style="margin-top: 1rem;">この型は、<strong>共感</strong>と<strong>物語</strong>で心を掴みます。</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">型3: ノウハウ・How to型</h4>
+                    <div class="code-block" style="font-size: 0.95rem;">【フォロワーを爆増させる3つの秘密】
+
+① テンプレート固定ツイート
+② しりとりリプライ
+③ 複数アカウント運用
+
+これだけで30日で5,000人増えました。
+
+詳しく知りたい人はリプください 👇</div>
+                    <p style="margin-top: 1rem;">この型は、<strong>価値提供</strong>と<strong>希少性</strong>で行動を促します。</p>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">バズを生み出す4ステップ</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 0.5rem;">ステップ1: バズる型でツイートを作成</h4>
+                        <p>上記の3つの型から選び、ツイートを作る。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 0.5rem;">ステップ2: 自分の複数アカウントから一斉リプライ</h4>
+                        <p>投稿から<strong>5分以内</strong>に、自分の持っている5-10アカウント全てからリプライを送る。重要なのは<strong>「数」と「速さ」</strong></p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 0.5rem;">ステップ3: アルゴリズムが反応し始める</h4>
+                        <p>複数のCランク以上のアカウントからリプライがつくと、Twitterのアルゴリズムが「注目されている投稿」と判定。おすすめ欄に載り始め、雪崩式に拡散が始まります。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 0.5rem;">ステップ4: 手動でさらに拡散を加速</h4>
+                        <p>おすすめに載り始めたら、他の大きめアカウントにもリプライを送る。関連するツイートを引用RT。これで完全にバズが確定します。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-highlight card">
+                <p style="font-size: 1.3rem; font-weight: 800; text-align: center; margin-bottom: 1rem;">
+                    実際のバズ事例
+                </p>
+                <p style="font-size: 1.1rem; text-align: center;">
+                    インプレッション: <strong>42,000</strong><br>
+                    いいね: <strong>1,200</strong><br>
+                    RT: <strong>280</strong><br>
+                    フォロワー増加: <strong>+850人（1日で）</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="phase-indicator">フェーズ⑥: 収益化への最短ルート</div>
+            <h2 class="section-title">収益化の3つのパターン</h2>
+
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                ここまでで、あなたは以下を手に入れています:
+            </p>
+
+            <ul class="results-list" style="background: white; padding: 2rem; border-radius: 15px;">
+                <li>高ランクの複数アカウント</li>
+                <li>自動化されたシステム</li>
+                <li>意図的にバズを生み出す力</li>
+            </ul>
+
+            <p style="font-size: 1.3rem; font-weight: 800; text-align: center; margin: 2rem 0;">
+                次は「収益化」です。
+            </p>
+
+            <div class="grid">
+                <div class="card">
+                    <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">パターン1: アフィリエイト</h4>
+                    <ul class="list-styled">
+                        <li>Amazon、楽天などの物販アフィリエイト</li>
+                        <li>情報商材のアフィリエイト</li>
+                        <li>ASP案件</li>
+                    </ul>
+                    <p style="font-weight: 700; margin-top: 1rem;">メリット:</p>
+                    <ul class="list-styled">
+                        <li>初期費用ゼロ</li>
+                        <li>誰でもすぐ始められる</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 800; color: var(--success-color);">
+                        目安収益: 月3-10万円
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">パターン2: PR案件・企業案件</h4>
+                    <p>フォロワー10,000人を超えると企業からDMが来る。1投稿5,000-30,000円。</p>
+                    <p style="font-weight: 700; margin-top: 1rem;">メリット:</p>
+                    <ul class="list-styled">
+                        <li>単価が高い</li>
+                        <li>継続案件になることも</li>
+                        <li>信頼性が上がる</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 800; color: var(--success-color);">
+                        目安収益: 月5-20万円
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 1rem;">パターン3: 自分の商品・サービス販売</h4>
+                    <ul class="list-styled">
+                        <li>noteの販売</li>
+                        <li>コンサル・コーチング</li>
+                        <li>オンラインサロン</li>
+                        <li>Brain、Tipsなどの教材販売</li>
+                    </ul>
+                    <p style="font-weight: 700; margin-top: 1rem;">メリット:</p>
+                    <ul class="list-styled">
+                        <li>利益率が最も高い</li>
+                        <li>自分の資産になる</li>
+                        <li>スケールしやすい</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-weight: 800; color: var(--success-color);">
+                        目安収益: 月10-100万円以上
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">収益化の具体的ステップ</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800;">ステップ1: フォロワー10,000人到達（30日）</h4>
+                        <p>まずはフォロワー10,000人を目指す。→ フェーズ①-③を実践</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800;">ステップ2: バズを定期的に生み出す（30-60日）</h4>
+                        <p>意図的にバズを月5回以上発生させ、認知度を上げる。→ フェーズ⑤を実践</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800;">ステップ3: 収益化の選択（60-90日）</h4>
+                        <p>自分に合った収益化方法を選ぶ。アフィリエイトから始める（初心者向け）</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800;">ステップ4: 収益の拡大（90日以降）</h4>
+                        <p>一つの収益源が確立したら、他の方法も並行する。</p>
+                        <p style="margin-top: 1rem; font-weight: 800; color: var(--success-color);">
+                            結果: 月収10-30万円以上
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-highlight card">
+                <h4 style="margin-bottom: 1rem;">私の収益実績</h4>
+                <div style="display: grid; gap: 1rem;">
+                    <p><strong>開始3ヶ月:</strong> フォロワー12,000人 / 収益月5万円</p>
+                    <p><strong>開始6ヶ月:</strong> フォロワー35,000人 / 収益月18万円</p>
+                    <p><strong>開始9ヶ月:</strong> フォロワー58,000人 / 収益月42万円</p>
+                    <p><strong>現在（12ヶ月）:</strong> フォロワー120,000人（複数アカウント合計） / <span style="font-size: 1.5rem;">収益月100万円以上</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="phase-indicator">フェーズ⑦: 長期的な影響力の構築</div>
+            <h2 class="section-title">真の成功とは</h2>
+
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                ここまでで、あなたは以下を達成しました:
+            </p>
+
+            <ul class="results-list" style="background: white; padding: 2rem; border-radius: 15px;">
+                <li>フォロワー10,000人以上</li>
+                <li>定期的なバズ</li>
+                <li>収益化の開始</li>
+            </ul>
+
+            <p style="font-size: 1.3rem; font-weight: 800; text-align: center; margin: 2rem 0;">
+                しかし、ここで終わりではありません。<br>
+                真の成功とは、「長期的な影響力」を築くことです。
+            </p>
+
+            <div class="comparison">
+                <div class="comparison-item bad">
+                    <div class="comparison-title">短期的成功</div>
+                    <ul class="list-styled">
+                        <li>フォロワーが増える</li>
+                        <li>バズが起きる</li>
+                        <li>一時的な収益</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item good">
+                    <div class="comparison-title">長期的成功</div>
+                    <ul class="list-styled">
+                        <li>ファンができる</li>
+                        <li>ブランドが確立する</li>
+                        <li>安定的な収益</li>
+                        <li>他の事業への展開</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">長期戦略のロードマップ</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800;">0-3ヶ月: 基盤構築フェーズ</h4>
+                        <ul class="list-styled">
+                            <li>フォロワー10,000人到達</li>
+                            <li>しりとり相互でエンゲージメント構築</li>
+                            <li>初バズ達成</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800;">3-6ヶ月: 認知拡大フェーズ</h4>
+                        <ul class="list-styled">
+                            <li>フォロワー30,000人到達</li>
+                            <li>月5-10回のバズ</li>
+                            <li>収益化開始（月5-15万円）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800;">6-12ヶ月: ブランド確立フェーズ</h4>
+                        <ul class="list-styled">
+                            <li>フォロワー50,000-100,000人</li>
+                            <li>独自コンテンツの発信</li>
+                            <li>収益安定化（月20-50万円）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4 style="color: var(--primary-color); font-weight: 800;">12ヶ月以降: 影響力拡大フェーズ</h4>
+                        <ul class="list-styled">
+                            <li>フォロワー100,000人以上</li>
+                            <li>コミュニティ運営</li>
+                            <li>他事業への展開</li>
+                            <li>収益最大化（月50-100万円以上）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-highlight card">
+                <p style="font-size: 1.3rem; font-weight: 800; text-align: center;">
+                    このシステムの本当の価値は、「お金」だけではありません。
+                </p>
+                <p style="font-size: 1.1rem; text-align: center; margin-top: 1.5rem;">
+                    真の価値は:
+                </p>
+                <ul class="list-styled" style="color: white; margin-top: 1rem;">
+                    <li>時間の自由</li>
+                    <li>場所の自由</li>
+                    <li>精神的な自由</li>
+                    <li>経済的な自由</li>
+                    <li>影響力</li>
+                </ul>
+                <p style="font-size: 1.2rem; font-weight: 700; text-align: center; margin-top: 1.5rem;">
+                    これらの「自由」を手に入れることが、最終ゴールです。
+                </p>
+            </div>
         </div>
     </div>
 
-    <!-- 最後のメッセージ -->
-    <div class="container narrow">
+    <div class="container narrow" id="cta-final">
         <div class="section">
             <h2 class="section-title">最後のメッセージ</h2>
 
@@ -1488,9 +1463,6 @@
                     <li>あなたが行動する準備ができている</li>
                     <li>あなたが成功する可能性が高い</li>
                 </ul>
-                <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; margin-top: 1.5rem;">
-                    ということを示しています。
-                </p>
                 <p style="font-size: 1.5rem; font-weight: 800; text-align: center; margin-top: 2rem; color: var(--primary-color);">
                     だから、自信を持ってください。
                 </p>
@@ -1500,9 +1472,6 @@
                 <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; text-align: center;">
                     人生は「選択」の連続
                 </h3>
-                <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem;">
-                    あなたは今、人生の重要な選択の前に立っています。
-                </p>
 
                 <div style="display: grid; gap: 2rem; margin-top: 2rem;">
                     <div style="background: rgba(0,0,0,0.1); padding: 1.5rem; border-radius: 10px;">
@@ -1510,7 +1479,7 @@
                         <ul class="list-styled">
                             <li>フォロワーが増えない日々</li>
                             <li>誰にも見られないツイート</li>
-                            <li>「いつか変わりたい」と思いながら���何も変わらない</li>
+                            <li>「いつか変わりたい」と思いながら、何も変わらない</li>
                         </ul>
                     </div>
 
@@ -1545,7 +1514,6 @@
             </div>
         </div>
 
-        <!-- 行動を起こす3ステップ -->
         <div class="section">
             <h2 class="section-title">行動を起こす3ステップ</h2>
 
@@ -1579,20 +1547,21 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 0.5rem;">
-                            ステップ2: スクリーンショットを撮影（1分）
+                            ステップ2: しりとり相手を見つける（15分）
                         </h4>
-                        <p>設定完了後、スクリーンショットを撮影。</p>
+                        <p>
+                            <code style="background: var(--bg-light); padding: 0.25rem 0.5rem; border-radius: 5px;">#しりとり相互2024</code> で検索して、募集している人にリプライを送る。
+                        </p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h4 style="color: var(--primary-color); font-weight: 800; margin-bottom: 0.5rem;">
-                            ステップ3: 指定の連絡先に送付（1分）
+                            ステップ3: しりとりを開始（10分）
                         </h4>
                         <p>
-                            以下の連絡先にスクリーンショットを送付:<br>
-                            <strong>[連絡先をここに記載]</strong>
+                            相手が見つかったら、その日からしりとりリプライを開始。
                         </p>
                     </div>
                 </div>
@@ -1600,12 +1569,63 @@
 
             <div class="card-highlight card" style="margin-top: 2rem; text-align: center;">
                 <p style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">
-                    たったこれだけ。
+                    これだけです。
                 </p>
                 <p style="font-size: 1.75rem; font-weight: 900;">
-                    たった7分で、あなたの人生が動き始めます。
+                    たった30分で、あなたの人生が動き始めます。
                 </p>
             </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>30日チャレンジに参加しませんか？</h2>
+            <p>このシステムを本気で実践したい方のために、<br>「30日チャレンジ」を用意しました。</p>
+
+            <div class="card" style="margin: 2rem auto; max-width: 600px; text-align: left; background: rgba(255,255,255,0.2);">
+                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 1rem;">30日チャレンジで得られるもの</h4>
+                <ul class="list-styled" style="color: white;">
+                    <li>しりとり相互コミュニティへの参加</li>
+                    <li>固定しりとり相手の確保</li>
+                    <li>アカウント複数管理ツールの紹介</li>
+                    <li>自動ツイートツールの紹介</li>
+                    <li>24時間以内の専属サポート</li>
+                </ul>
+            </div>
+
+            <div class="stats-grid" style="margin: 3rem 0;">
+                <div class="stat-box" style="background: rgba(255,255,255,0.2); color: white;">
+                    <span class="stat-number" style="-webkit-text-fill-color: white;">30日</span>
+                    <span class="stat-label" style="color: white;">で人生が変わる</span>
+                </div>
+                <div class="stat-box" style="background: rgba(255,255,255,0.2); color: white;">
+                    <span class="stat-number" style="-webkit-text-fill-color: white;">10,000</span>
+                    <span class="stat-label" style="color: white;">フォロワー目標</span>
+                </div>
+                <div class="stat-box" style="background: rgba(255,255,255,0.2); color: white;">
+                    <span class="stat-number" style="-webkit-text-fill-color: white;">94%</span>
+                    <span class="stat-label" style="color: white;">継続率</span>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 15px; max-width: 600px; margin: 2rem auto;">
+                <p style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; text-align: center;">
+                    参加方法
+                </p>
+                <p style="color: var(--text-primary); text-align: center; line-height: 1.8;">
+                    上記のテンプレートを固定ツイートに設定し、<br>
+                    <code style="background: var(--bg-light); padding: 0.25rem 0.5rem; border-radius: 5px;">#しりとり相互2024</code> で検索して<br>
+                    しりとり相手を見つけて開始してください。
+                </p>
+                <p style="color: var(--text-secondary); text-align: center; margin-top: 1rem; font-size: 0.95rem;">
+                    質問や相談がある場合は、同じハッシュタグで質問ツイートをしてください。<br>
+                    コミュニティのメンバーがサポートします。
+                </p>
+            </div>
+
+            <p style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.95; font-weight: 700;">
+                参加条件: 「本気で人生を変えたい」と思っていること<br>
+                それだけです。
+            </p>
         </div>
 
         <div class="section" style="text-align: center;">
@@ -1615,19 +1635,17 @@
             <p style="font-size: 1.5rem; font-weight: 800; margin-bottom: 2rem;">
                 あなたの物語が、今、始まります。
             </p>
-            <div class="button-group">
-                <a href="#cta-final" class="cta-button large">30日チャレンジに参加する</a>
-            </div>
+            <p style="font-size: 1.75rem; font-weight: 900; color: var(--primary-color);">
+                私はあなたの成功を、心から確信しています。
+            </p>
         </div>
     </div>
 
-    <!-- フッター -->
     <footer class="footer">
         <p>© 2024 爆速万アカ完全ガイド. All rights reserved.</p>
         <p style="margin-top: 1rem;">このシステムは、真剣に人生を変えたい方のために提供しています。</p>
     </footer>
 
-    <!-- JavaScriptでプログレスバー -->
     <script>
         window.addEventListener('scroll', function() {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
